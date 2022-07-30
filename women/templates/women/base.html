@@ -1,6 +1,6 @@
 {% load static %}
-<!--{% load women_tags %}-->
-
+{% load women_tags %}
+<!DOCTYPE html>
 <html>
 <head>
 	<title>{{title}}</title>
@@ -33,7 +33,6 @@
 <tr>
 <!-- Sidebar слева -->
 	<td valign="top" class="left-chapters">
-		{% getcats as categories %}
 	<ul id="leftchapters">
 {% if cat_selected == 0 %}
 		<li class="selected">Все категории</li>
@@ -41,11 +40,11 @@
 		<li><a href="{% url 'home' %}">Все категории</a></li>
 {% endif %}
 
-{% show_categories cat_selected=cat_selected%}
+{% show_categories cat_selected=cat_selected %}
 
 		<li class="share">
 		<p>Наш канал</p>
-		<a class="share-yt" href="https://www.youtube.com" target="_blank" rel="nofollow"></a>
+		<a class="share-yt" href="https://www.youtube.com/channel/UClJzWfGWuGJL2t-3dYKcHTA/playlists" target="_blank" rel="nofollow"></a>
 		</li>
 	</ul>
 </td>
